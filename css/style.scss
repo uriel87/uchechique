@@ -1,11 +1,8 @@
 
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
 $primary-color: #000a7a ;
 $secondary-color: #f1f1f1;
-
-
-
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
 
 .heading {
@@ -221,8 +218,6 @@ header {
 }
 
 .header-contact {
-  // position: relative;
-  // top: 180px;
   font-size: 130%;
   font-weight: bold;
 
@@ -269,6 +264,11 @@ header {
       margin: 1em 0;
       text-align: left;
       color: #353535;
+
+      span {
+        font-weight: bold;
+      }
+
     }
   }
 
@@ -370,11 +370,6 @@ header {
     margin: 0 0.5em 5em;
     width: calc(80%/3);
     cursor: pointer;
-
-    // &.project-item:hover.project-item div {
-    //   height: 45%;
-    //   background-color: rgba(0,0,0,0.6);
-    // }
 
     img {
       width: 100%;

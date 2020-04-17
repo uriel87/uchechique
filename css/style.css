@@ -251,6 +251,10 @@ header nav #go-to-top:hover {
   color: #353535;
 }
 
+#education .education-list li span {
+  font-weight: bold;
+}
+
 #work-experience {
   background-color: #f1f1f1;
   padding: 0 4em 3em;
