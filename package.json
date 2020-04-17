@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio uriel chechique",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "node-dev": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uriel87/portfolio-website.git"
+  },
+  "author": "Uriel Chechique",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uriel87/portfolio-website/issues"
+  },
+  "homepage": "https://github.com/uriel87/portfolio-website#readme"
+}

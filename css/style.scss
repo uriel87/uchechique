@@ -1,0 +1,401 @@
+
+
+$primary-color: #000a7a ;
+$secondary-color: #f1f1f1;
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+
+.heading {
+  padding: 1em 0;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 250%;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:after {
+    display: block;
+    content: ' ';
+    width: 3em;
+    height: .2em;
+    background-color: $primary-color;
+    margin: .5em auto;
+  }
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+html {
+  height: 100%;
+  font-size: 1em;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  width:100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+
+a,
+a:active,
+a:hover,
+a:focus{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button:active,
+button:focus {
+  outline: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1em .5em;
+  background-image: url(../images/fs_img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  font-family: 'Noto Sans', sans-serif;
+
+  nav {
+
+    overflow: auto;
+    z-index: 999;
+
+    .background-mainNav-mobile {
+      display: none;
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.7);
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      opacity: 0;
+      top: 4em;
+      z-index: -999;
+    }
+
+    .main-menu {
+
+      float: right;
+      position: relative;
+      top: 1em;
+      font-size: 110%;
+
+      li {
+        float: left;
+        margin-right: 2em;
+        color: $primary-color;
+        text-transform: capitalize;
+      }
+
+      &.show-nav {
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%);
+      }
+
+    }
+
+    .mobile-nav-icon {
+      background-color: transparent;
+      position: fixed;
+      width: 50px;
+      top: 1em;
+      border: 0;
+      right: 0;
+      display: none;
+    }
+
+    #logo {
+      background-image: url("../images/ucLogo.png");
+      width: 200px;
+      height: 60px;
+      background-repeat: no-repeat;
+      float: left;
+    }
+
+    #go-to-top {
+      position: fixed;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      width: 40px;
+      top: 3em;
+      right: 1.5em;
+      $primary-color: #000a7a;
+      display: none;
+
+      @-webkit-keyframes MoveUpDown {
+        0% {
+          top: 3em;
+        }
+        25% {
+          top: 2.75em;
+        }
+        50% {
+          top: 3em;
+        }
+        75% {
+          top: 3.25em;
+        }
+        100% {
+          top: 3em;
+        }
+      }
+
+      @keyframes MoveUpDown {
+        0% {
+          top: 3em;
+        }
+        25% {
+          top: 2.75em;
+        }
+        50% {
+          top: 3em;
+        }
+        75% {
+          top: 3.25em;
+        }
+        100% {
+          top: 3em;
+        }
+      }
+
+      &:hover {
+        -webkit-animation: MoveUpDown 1s linear infinite;
+        animation: MoveUpDown 1s linear infinite;
+      }
+
+    }
+  }
+
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin: 90px 0 30px;
+
+
+    img {
+      flex:1;
+      width: 16%;
+      height: auto;
+      -webkit-border-radius: 155px;
+      border-radius: 155px;
+      margin-bottom: 1em;
+    }
+
+    h1, p {
+      $primary-color: #000a7a;
+    }
+
+}
+
+.header-contact {
+  // position: relative;
+  // top: 180px;
+  font-size: 130%;
+  font-weight: bold;
+
+  .social-media-list {
+    display: flex;
+    margin: auto;
+    font-size: 170%;
+    justify-content: center;
+
+    ul {
+        display: flex;
+        justify-content: center;
+
+      li {
+        font-size: 120%;
+        margin: 0 20px;
+
+      &:hover {
+        color: $primary-color
+      }
+
+      }
+
+    }
+
+}
+}
+
+
+
+
+#education {
+
+  padding: 0 1em 3em;
+  font-family: 'Noto Sans', sans-serif;
+
+  h2 {
+    @extend .heading;
+  }
+
+  .education-list {
+    li{
+      font-size: 120%;
+      margin: 1em 0;
+      text-align: left;
+      color: #353535;
+    }
+  }
+
+}
+
+
+#work-experience {
+  background-color: $secondary-color;
+  padding: 0 4em 3em;
+  font-family: 'Noto Sans', sans-serif;
+
+  h2 {
+    @extend .heading;
+  }
+
+  .work-experience-list {
+
+    .work-experience-item {
+
+      h3 {
+        text-align: left;
+        margin-top: 1.5em;
+        color: #353535;
+        text-transform: capitalize;
+        font-size: 135%;
+        font-weight: 700;
+      }
+
+      ul {
+        li {
+          margin: 1em 0;
+          font-size: 120%;
+          text-align: left;
+          color: #353535;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+#personal-skills {
+
+  display: flex;
+  flex-direction: column;
+  padding: 0 4em 3em;
+  font-family: 'Noto Sans', sans-serif;
+  
+
+  h2 {
+    @extend .heading;
+  }
+
+  .skill-item {
+    padding: 0em 3.5em;
+
+    img {
+      height: auto;
+    }
+
+    ul {
+      li {
+        font-size: 120%;
+        margin-bottom: 20px;
+      }
+    }
+
+    h3 {
+      margin: 1em 0em;
+      font-size: 130%;
+      text-transform: capitalize;
+      font-weight: 700;
+    }
+
+  }
+}
+
+
+#project-list {
+  background-color: $secondary-color;
+  padding: 0 4em 3em;
+  font-family: 'Noto Sans', sans-serif;
+  overflow: auto;
+
+  h2 {
+    @extend .heading;
+  }
+
+  .projects {
+
+    display: flex;
+    justify-content: space-between;
+
+  .project-item {
+    position: relative;
+    display: inline-block;
+    margin: 0 0.5em 5em;
+    width: calc(80%/3);
+    cursor: pointer;
+
+    // &.project-item:hover.project-item div {
+    //   height: 45%;
+    //   background-color: rgba(0,0,0,0.6);
+    // }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .project-details {
+      margin: 25px 0;
+      width: 100%;
+      font-size: 100%;
+
+      h4 {
+        text-transform: uppercase;
+      }
+    }
+
+  }
+}
+
+}
+
+
+
+
