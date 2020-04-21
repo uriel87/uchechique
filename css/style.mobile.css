@@ -134,10 +134,16 @@
     margin: 0 0.5em 5em;
     cursor: pointer;
   }
+  #project-list .projects .project-item .project-details p {
+    padding: 0 15px;
+  }
 }
 
 /* small phone to 480px */
 @media only screen and (max-width: 480px) {
+  #project-list .projects .project-item .project-details p {
+    padding: 0 15px;
+  }
   #contact-us {
     font-size: 80%;
   }
